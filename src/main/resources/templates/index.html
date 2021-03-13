@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>List of all employees</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+</head>
+<body>
+
+<div align="center" class="container my-2">
+	<h1>Employees List</h1>
+	<table border="1" class = "table table-stripped table-responsive-md">
+		<thead>
+			<tr>
+				<th> Employee Id</th>
+				<th> First Name</th>
+				<th> Last Name</th>
+				<th> Job</th>
+				<th> Manager Id</th>
+				<th> Hire Date</th>
+				<th> Salary</th>
+				<th> Comm</th>
+				<th> Department Id</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="employee: ${listEmployees}">
+				<td th:text="${employee.empId}"></td>
+				<td th:text="${employee.firstName}"></td>
+				<td th:text="${employee.lastName}"></td>
+				<td th:text="${employee.job}"></td>
+				<td th:text="${employee.mngId}"></td>
+				<td th:text="${employee.hireDate}"></td>
+				<td th:text="${employee.salary}"></td>
+				<td th:text="${employee.comm}"></td>
+				<td th:text="${employee.depId}"></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</body>
+</html>
